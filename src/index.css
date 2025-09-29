@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DigitalCraft Design System - Modern Digital Agency Theme
+All colors are HSL for optimal theming support
+*/
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
+    
+    /* Brand Colors - Primary Purple Theme */
+    --brand-primary: 248 64% 66%;        /* #585de8 */
+    --brand-primary-light: 248 64% 76%;   /* Lighter variant */
+    --brand-primary-dark: 248 64% 56%;    /* Darker variant */
+    
+    /* Accent Colors - Complementary Palette */
+    --brand-teal: 168 70% 42%;           /* #14b8a6 */
+    --brand-orange: 27 96% 54%;          /* #f97316 */
+    --brand-pink: 330 81% 60%;           /* #ec4899 */
+    --brand-purple-light: 290 66% 80%;   /* Light purple */
+    
+    /* Neutral Palette */
+    --neutral-50: 0 0% 98%;
+    --neutral-100: 240 5% 96%;
+    --neutral-200: 240 6% 90%;
+    --neutral-300: 240 5% 84%;
+    --neutral-400: 240 4% 64%;
+    --neutral-500: 240 4% 46%;
+    --neutral-600: 240 5% 34%;
+    --neutral-700: 240 5% 26%;
+    --neutral-800: 240 4% 16%;
+    --neutral-900: 240 6% 10%;
+    
+    /* Semantic Colors */
+    --primary: var(--brand-primary);
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: var(--neutral-100);
+    --secondary-foreground: var(--neutral-900);
+    
+    --accent: var(--brand-teal);
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: var(--neutral-100);
+    --muted-foreground: var(--neutral-500);
+    
+    --card: 0 0% 100%;
+    --card-foreground: var(--neutral-900);
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--neutral-900);
+    
+    --border: var(--neutral-200);
+    --input: var(--neutral-200);
+    --ring: var(--brand-primary);
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-teal)), hsl(var(--brand-primary)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-pink)));
+    --gradient-cool: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-teal)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--neutral-100)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 0 1px hsl(var(--brand-primary) / 0.05), 0 1px 3px 0 hsl(var(--brand-primary) / 0.1);
+    
+    /* Typography Scale */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-primary font-semibold;
+  }
+
+  p, span, div {
+    @apply font-secondary;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-warm {
+    background-image: var(--gradient-warm);
+  }
+
+  .bg-gradient-cool {
+    background-image: var(--gradient-cool);
+  }
+
+  .bg-gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+
+  .bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Safari fix */
+  }
+
+  /* Brand Colors */
+  .text-brand-primary { color: hsl(var(--brand-primary)); }
+  .text-brand-teal { color: hsl(var(--brand-teal)); }
+  .text-brand-orange { color: hsl(var(--brand-orange)); }
+  .text-brand-pink { color: hsl(var(--brand-pink)); }
+  
+  .bg-brand-primary { background-color: hsl(var(--brand-primary)); }
+  .bg-brand-teal { background-color: hsl(var(--brand-teal)); }
+  .bg-brand-orange { background-color: hsl(var(--brand-orange)); }
+  .bg-brand-pink { background-color: hsl(var(--brand-pink)); }
+
+  /* Custom Shadows */
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-medium { box-shadow: var(--shadow-medium); }
+  .shadow-large { box-shadow: var(--shadow-large); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  /* Glass Morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Transitions */
+  .transition-fast { transition: var(--transition-fast); }
+  .transition-normal { transition: var(--transition-normal); }
+  .transition-slow { transition: var(--transition-slow); }
+
+  /* Modern Animations */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-large;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  .hover-glow:hover {
+    @apply shadow-glow scale-105;
+  }
+
+  /* Custom Clip Paths */
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .clip-wave {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+}
