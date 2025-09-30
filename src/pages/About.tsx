@@ -21,6 +21,8 @@ import bgImage from "@/assets/bg.png";
 import aboutHistoryImage from "@/assets/about-history.jpg";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import HeroVideo from "../../src/assets/hero-1.mp4"
+import { Link } from "react-router-dom";
 
 const About = () => {
   const profileControls = useAnimation();
@@ -244,7 +246,7 @@ const About = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-100 z-0"
         >
-          <source src="/src/assets/hero-1.mp4" type="video/mp4" />
+          <source src={HeroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -320,7 +322,7 @@ const About = () => {
         className="relative py-20 px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        {/* BG OVERLAY for opacity */}
+        {/* BG OVERLAY */}
         <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
 
         {/* SHAPES */}
@@ -337,63 +339,61 @@ const About = () => {
         <img
           src={shape2}
           alt="shape"
-          className="absolute top-16 right-1/3 w-18 h-16 opacity-80 z-10"
+          className="absolute top-6 right-10 w-18 h-16 opacity-80 z-10"
         />
 
         {/* CONTENT */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-20">
-          {/* LEFT SIDE - Mission & Vision */}
-          <div className="bg-white/80 backdrop-blur-md rounded-lg p-10 shadow-lg border border-gray-100">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Mission & Vision
-            </h2>
-
-            <div className="mb-6">
-              <h3 className="text-lg font-bold text-indigo-600">MISSION</h3>
-              <p className="text-gray-700 mt-2">
-                At ARA Discover, our mission is simple: to transform businesses into digital powerhouses. We provide tailor-made marketing strategies that maximize visibility, attract the right audience, and convert engagement into measurable growth. Our goal is to help brands adapt, evolve, and lead in a competitive online world.
-              </p>
-            </div>
-
+        <div className="max-w-6xl mx-auto flex flex-col gap-16 relative z-20">
+          {/* Row 1 - Mission & Vision (2 Columns) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white/80 backdrop-blur-md rounded-lg p-10 shadow-lg border border-gray-100 relative">
+            {/* Mission */}
             <div>
-              <h3 className="text-lg font-bold text-indigo-600">VISION</h3>
-              <p className="text-gray-700 mt-2">
-                We envision a world where businesses—big and small—harness the full potential of digital marketing to scale, innovate, and dominate their industries. By blending creativity with cutting-edge technology, we aim to set new benchmarks for performance-driven digital marketing that creates long-term impact.
+              <h2 className="text-2xl font-bold mb-4 text-primary">MISSION</h2>
+              <p className="text-gray-700">
+                At ARA Discover, our mission is simple: to transform businesses into
+                digital powerhouses. We provide tailor-made marketing strategies that
+                maximize visibility, attract the right audience, and convert engagement
+                into measurable growth. Our goal is to help brands adapt, evolve, and lead
+                in a competitive online world.
               </p>
             </div>
+
+            {/* Vision */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4 text-primary">VISION</h2>
+              <p className="text-gray-700">
+                We envision a world where businesses—big and small—harness the full
+                potential of digital marketing to scale, innovate, and dominate their
+                industries. By blending creativity with cutting-edge technology, we aim to
+                set new benchmarks for performance-driven digital marketing that creates
+                long-term impact.
+              </p>
+            </div>
+
+            {/* Center Line */}
+            {/* <div className="hidden md:block absolute top-8 bottom-8 left-1/2 w-[2px] bg-gradient-to-b from-primary via-indigo-400 to-primary rounded-full"></div> */}
           </div>
 
-          {/* RIGHT SIDE - Stats */}
-          <div className="relative pl-10 flex">
-            <div className="relative flex flex-col items-start">
-              {/* Yellow vertical line */}
-              <div className="border-l-4 border-yellow-400 absolute top-0 bottom-0 left-2"></div>
+          {/* Row 2 - Stats (3 Columns) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 shadow-lg border border-gray-100">
+              <h3 className="text-3xl font-bold text-gray-900">117+</h3>
+              <p className="text-gray-600">Happy Clients</p>
+            </div>
 
-              {/* Stats with dots */}
-              <div className="space-y-12 relative z-10 pl-6 stats-list">
-                <div className="stat-item">
-                  <h3 className="text-3xl font-bold text-gray-900">117+</h3>
-                  <p className="text-gray-600">Happy Clients</p>
-                </div>
+            <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 shadow-lg border border-gray-100">
+              <h3 className="text-3xl font-bold text-gray-900">96+</h3>
+              <p className="text-gray-600">Projects Completed</p>
+            </div>
 
-                <div className="stat-item">
-                  <h3 className="text-3xl font-bold text-gray-900">
-                    96+
-                  </h3>
-                  <p className="text-gray-600">Projects completed</p>
-                </div>
-
-                <div className="stat-item">
-                  <h3 className="text-3xl font-bold text-gray-900">
-                    34+
-                  </h3>
-                  <p className="text-gray-600">Expert Team Members</p>
-                </div>
-              </div>
+            <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 shadow-lg border border-gray-100">
+              <h3 className="text-3xl font-bold text-gray-900">34+</h3>
+              <p className="text-gray-600">Expert Team Members</p>
             </div>
           </div>
         </div>
       </section>
+
 
       <section className="py-24 bg-gradient-to-br from-neutral-50 to-neutral-100 relative">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -468,9 +468,12 @@ const About = () => {
                 <p className="text-sm text-neutral-600 mb-3">
                   Take your brand visibility to the next level.
                 </p>
-                <button className="px-4 py-2 rounded-full bg-[#7f70e0] text-white text-sm">
+                <Link
+                  to="/services"
+                  className="px-4 py-2 rounded-full bg-[#7f70e0] text-white text-sm"
+                >
                   Learn more
-                </button>
+                </Link>
               </div>
             </div>
           </div>

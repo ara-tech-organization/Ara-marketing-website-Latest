@@ -27,7 +27,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8 shadow-soft">
             <Sparkles className="w-4 h-4 text-brand-primary" />
             <span className="text-sm font-secondary font-medium text-foreground">
-              Trusted by 500+ Businesses Worldwide
+              Trusted by 100+ Businesses across TamilNadu
             </span>
           </div>
 

@@ -958,8 +958,8 @@ const Services = () => {
 
   // Main services page
   const stats = [
-    { icon: Users, number: "150+", label: "Happy Clients" },
-    { icon: Award, number: "500+", label: "Projects Completed" },
+    { icon: Users, number: "96+", label: "Happy Clients" },
+    { icon: Award, number: "117+", label: "Projects Completed" },
     { icon: TrendingUp, number: "250%", label: "Average ROI Increase" },
     { icon: Star, number: "98%", label: "Client Satisfaction" }
   ];

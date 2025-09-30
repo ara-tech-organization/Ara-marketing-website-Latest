@@ -10,6 +10,12 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Website from "../../assets/websiteDevelopment.jpg"
+import SocialMedia from "../../assets/socialmedia.jpeg"
+import MetaAds from "../../assets/metaads.jpg"
+import GoogleAds from "../../assets/googleads.jpg"
+import GraphicDesign from "../../assets/graphicdesigner.jpg"
+import VideoEditing from "../../assets/video.jpg"
 
 const ServicesSection = () => {
   const services = [
@@ -20,7 +26,7 @@ const ServicesSection = () => {
       features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Secure"],
       gradient: "gradient-primary",
       link: "/services/website-development",
-      image: "../src/assets/websiteDevelopment.jpg"
+      image: Website
     },
     {
       icon: Megaphone,
@@ -29,7 +35,7 @@ const ServicesSection = () => {
       features: ["Content Strategy", "Audience Growth", "Analytics", "Engagement"],
       gradient: "gradient-accent",
       link: "/services/social-media-marketing",
-      image: "../src/assets/socialmedia.jpeg"
+      image: SocialMedia
     },
     {
       icon: Target,
@@ -38,7 +44,7 @@ const ServicesSection = () => {
       features: ["Targeted Campaigns", "A/B Testing", "ROI Tracking", "Optimization"],
       gradient: "gradient-warm",
       link: "/services/meta-ads",
-      image: "../src/assets/metaads.jpg"
+      image: MetaAds
     },
     {
       icon: Search,
@@ -47,7 +53,7 @@ const ServicesSection = () => {
       features: ["Keyword Research", "Ad Optimization", "Conversion Tracking", "Performance Reports"],
       gradient: "gradient-cool",
       link: "/services/google-ads",
-      image: "../src/assets/googleads.jpg"
+      image: GoogleAds
     },
     {
       icon: Palette,
@@ -56,7 +62,7 @@ const ServicesSection = () => {
       features: ["Brand Identity", "Print Design", "Digital Graphics", "UI/UX Design"],
       gradient: "gradient-primary",
       link: "/services/graphic-design",
-      image: "../src/assets/graphicdesigner.jpg"
+      image: GraphicDesign
     },
     {
       icon: Video,
@@ -65,7 +71,7 @@ const ServicesSection = () => {
       features: ["Motion Graphics", "Color Grading", "Sound Design", "Post-Production"],
       gradient: "gradient-accent",
       link: "/services/video-editing",
-      image: "../src/assets/video.jpg"
+      image: VideoEditing
     }
   ];
 

@@ -66,19 +66,29 @@ const Header = () => {
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
-                    <button className="flex items-center space-x-1 text-foreground hover:text-brand-primary transition-colors duration-300 font-secondary font-medium">
+                    <Link
+                      to={item.path} // ✅ This makes "Services" clickable
+                      className="flex items-center space-x-1 text-foreground hover:text-brand-primary transition-colors duration-300 font-secondary font-medium"
+                    >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                    </button>
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
+                          }`}
+                      />
+                    </Link>
 
                     {/* Services Dropdown */}
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-xl shadow-large transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                      }`}>
+                    <div
+                      className={`absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-xl shadow-large transition-all duration-300 ${isServicesOpen
+                        ? "opacity-100 visible translate-y-0"
+                        : "opacity-0 invisible -translate-y-2"
+                        }`}
+                    >
                       <div className="p-2">
                         {services.map((service, index) => (
                           <Link
                             key={index}
-                            to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                            to={`/services/${service.toLowerCase().replace(/\s+/g, "-")}`}
                             className="block px-4 py-3 text-sm text-foreground hover:text-brand-primary hover:bg-neutral-50 rounded-lg transition-all duration-200 font-secondary"
                           >
                             {service}
@@ -121,9 +131,11 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}>
-          <nav className="py-4 space-y-2">
+        <div
+          className={`lg:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            }`}
+        >
+          <nav className="py-4 flex flex-col gap-2">
             {navItems.map((item) => (
               <div key={item.name}>
                 <Link
@@ -134,12 +146,13 @@ const Header = () => {
                 >
                   {item.name}
                 </Link>
+
                 {item.hasDropdown && (
                   <div className="ml-4 mt-2 space-y-1">
                     {services.map((service, index) => (
                       <Link
                         key={index}
-                        to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                        to={`/services/${service.toLowerCase().replace(/\s+/g, "-")}`}
                         className="block px-4 py-2 text-sm text-muted-foreground hover:text-brand-primary hover:bg-neutral-50 rounded-lg transition-all duration-200 font-secondary"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -150,7 +163,9 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div className="px-4 pt-2">
+
+            {/* ✅ Book Consultation Button */}
+            <div className="px-4 pt-4">
               <Link to="/contact" className="w-full">
                 <Button className="w-full bg-gradient-primary hover:bg-gradient-accent text-white font-secondary font-semibold py-2.5 rounded-xl">
                   Book your Consultation

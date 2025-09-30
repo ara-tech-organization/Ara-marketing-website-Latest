@@ -35,7 +35,7 @@ const WorkProcess = () => {
 
   return (
     <section className="relative py-24 bg-gradient-to-b from-white via-neutral-50 to-white overflow-hidden">
-      <div className="container mx-auto px-24">
+      <div className="container mx-auto px-6 sm:px-4 md:px-6 lg:px-24">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

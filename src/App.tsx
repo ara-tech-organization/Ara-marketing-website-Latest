@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+       <BrowserRouter basename="/Ara-marketing-website-Latest">
         <ScrollToTop /> {/* 👈 ensures every new route loads from top */}
         <Routes>
           <Route path="/" element={<Index />} />

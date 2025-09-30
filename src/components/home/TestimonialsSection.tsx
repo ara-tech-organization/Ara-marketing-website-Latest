@@ -38,22 +38,22 @@ const TestimonialsSection = () => {
       rating: 5,
       // company: "InnovateX",
     },
-    {
-      name: "Sophia Lee",
-      // position: "Founder, StyleHub",
-      content:
-        "The team did an outstanding job with our website. The design is modern, user-friendly, and perfectly represents our brand.",
-      rating: 5,
-      // company: "StyleHub",
-    },
-    {
-      name: "James Carter",
-      // position: "Operations Head, BuildPro",
-      content:
-        "Their digital marketing strategies truly transformed our online presence – we’re reaching more customers and seeing real growth.",
-      rating: 5,
-      // company: "BuildPro",
-    },
+    // {
+    //   name: "Sophia Lee",
+    //   // position: "Founder, StyleHub",
+    //   content:
+    //     "The team did an outstanding job with our website. The design is modern, user-friendly, and perfectly represents our brand.",
+    //   rating: 5,
+    //   // company: "StyleHub",
+    // },
+    // {
+    //   name: "James Carter",
+    //   // position: "Operations Head, BuildPro",
+    //   content:
+    //     "Their digital marketing strategies truly transformed our online presence – we’re reaching more customers and seeing real growth.",
+    //   rating: 5,
+    //   // company: "BuildPro",
+    // },
   ];
 
   const stats = [{ number: "98%", label: "Client Satisfaction", color: "brand-primary" }, { number: "250%", label: "Average ROI Increase", color: "brand-teal" }, { number: "45%", label: "Faster Project Delivery", color: "brand-orange" }, { number: "24/7", label: "Support Available", color: "brand-pink" }];
