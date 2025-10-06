@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ara-tech-organization.github.io/Ara-marketing-website-Latest",
+  "homepage": "/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

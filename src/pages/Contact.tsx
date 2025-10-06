@@ -23,7 +23,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone:"",
+    phone: "",
     company: "",
     service: "",
     message: "",
@@ -42,23 +42,62 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone:"",
-      company: "",
-      service: "",
-      message: "",
-    });
+    const payload = {
+      FullName: formData.name,
+      phoneNo: formData.phone,
+      email: formData.email,
+      CompanyName: formData.company,
+      service: formData.service,
+      Message: formData.message,
+    };
+
+    try {
+      const response = await fetch(
+        "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/discoverMarketing",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 123", 
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      // Check if the response is JSON
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: data.message || "We received your message.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: data.message || "Something went wrong.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Network Error:", error);
+      toast({
+        title: "Network Error",
+        description: "Please check your connection and try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const contactInfo = [
@@ -330,6 +369,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
+
                   className="w-full bg-gradient-to-r from-[#7f70e0] to-indigo-500 text-white py-4 font-semibold rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
                   Send Message
