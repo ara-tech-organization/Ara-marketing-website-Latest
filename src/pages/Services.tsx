@@ -672,7 +672,7 @@ const Services = () => {
                       <p className="text-lg text-neutral-700 font-secondary leading-relaxed">
                         Your brand’s visual identity is more than just aesthetics—it’s the
                         first impression, the silent storyteller, and the ultimate
-                        game-changer. At ARA Discoveries Pvt Ltd, we craft compelling
+                        game-changer. At ARA Discover Marketing, we craft compelling
                         designs that don’t just look great but resonate with your audience
                         and drive real engagement.
                       </p>
@@ -753,7 +753,7 @@ const Services = () => {
                       </h2>
                       <p className="text-lg text-neutral-700 font-secondary leading-relaxed">
                         Every brand has a story, and nothing tells it better than a well-crafted video.
-                        At ARA Discoveries Pvt Ltd, we specialize in high-impact video editing that turns raw footage into cinematic
+                        At ARA Discover Marketing, we specialize in high-impact video editing that turns raw footage into cinematic
                         experiences that capture attention, spark emotions, and drive engagement.
                       </p>
                     </div>

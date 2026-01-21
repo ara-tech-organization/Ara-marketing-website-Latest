@@ -102,7 +102,7 @@ const ServicesSection = () => {
           </h2>
           
           <p className="text-xl text-neutral-600 font-secondary max-w-3xl mx-auto leading-relaxed">
-            At ARA Discoveries Pvt Ltd, we provide innovative digital marketing services designed to accelerate growth, increase brand awareness, and maximize ROI. Our expertise ensures your business stands out in the digital landscape.
+            At ARA Discover Marketing, we provide innovative digital marketing services designed to accelerate growth, increase brand awareness, and maximize ROI. Our expertise ensures your business stands out in the digital landscape.
           </p>
         </div>
 

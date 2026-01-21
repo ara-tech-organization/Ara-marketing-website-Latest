@@ -272,7 +272,7 @@ const About = () => {
               </motion.div>
 
               <p className="text-xl text-white/90 font-secondary mb-8 leading-relaxed">
-                At ARA Discover, we don't just offer digital marketing—we craft game-changing online experiences that amplify brands, drive engagement, and fuel business success. With a data-driven approach and a passion for innovation, we help businesses like yours stand out, connect, and thrive in the ever-evolving digital landscape.
+                At ARA Discover Marketing, we don't just offer digital marketing—we craft game-changing online experiences that amplify brands, drive engagement, and fuel business success. With a data-driven approach and a passion for innovation, we help businesses like yours stand out, connect, and thrive in the ever-evolving digital landscape.
               </p>
 
               <div className="flex items-center space-x-8">
@@ -350,7 +350,7 @@ const About = () => {
             <div>
               <h2 className="text-2xl font-bold mb-4 text-primary">MISSION</h2>
               <p className="text-gray-700">
-                At ARA Discover, our mission is simple: to transform businesses into
+                At ARA Discover Marketing, our mission is simple: to transform businesses into
                 digital powerhouses. We provide tailor-made marketing strategies that
                 maximize visibility, attract the right audience, and convert engagement
                 into measurable growth. Our goal is to help brands adapt, evolve, and lead

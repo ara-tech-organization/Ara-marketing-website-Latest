@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="border-t border-neutral-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-neutral-400 font-secondary text-sm">
-              © 2025 Ara Discoveries Pvt.Lmt. All rights reserved. 
+              © 2025 ARA Discover Marketing. All rights reserved. 
               {/* <Heart className="w-4 h-4 inline text-brand-pink" /> by our team. */}
             </div>
 

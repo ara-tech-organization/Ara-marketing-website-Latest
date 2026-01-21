@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       name: "Naturals Thanjavur",
       // position: "CEO, TechStart Inc.",
       content:
-        "Working with ARA Discover was a game-changer! Their marketing strategies helped me reach more customers and boost engagement.",
+        "Working with ARA Discover Marketing was a game-changer! Their marketing strategies helped me reach more customers and boost engagement.",
       rating: 5,
       // company: "TechStart Inc.",
     },
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       name: "Naturals Nizam Colony",
       // position: "Marketing Director, GrowthCo",
       content:
-        "My website now looks professional and user-friendly, thanks to ARA Discover's amazing web development team!",
+        "My website now looks professional and user-friendly, thanks to ARA Discover Marketing's amazing web development team!",
       rating: 5,
       // company: "GrowthCo",
     },

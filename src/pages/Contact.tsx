@@ -54,6 +54,19 @@ const Contact = () => {
       Message: formData.message,
     };
 
+    
+    
+    const crmPayload = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      service: formData.service,
+      lead_source: "Contact Form",
+      custom_fields: {
+        company_name: formData.company,
+        message: formData.message,
+      },
+    };
     try {
       const response = await fetch(
         "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/discoverMarketing",
@@ -67,8 +80,22 @@ const Contact = () => {
         }
       );
 
+            const res = await fetch(
+        "https://ara-fb-production-cmfgdub4f8h4bch0.centralindia-01.azurewebsites.net/api/leads/public",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(crmPayload),
+        }
+      );
+
       // Check if the response is JSON
       const data = await response.json();
+      await res.json();
+
+
 
       if (response.ok) {
         toast({
@@ -90,6 +117,8 @@ const Contact = () => {
           variant: "destructive",
         });
       }
+
+
     } catch (error) {
       console.error("Network Error:", error);
       toast({

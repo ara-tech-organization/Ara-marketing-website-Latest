@@ -34,14 +34,14 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-primary mb-6 leading-tight">
             <span className="block text-foreground">Boost Your Business </span>
-            <span className="block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-5">
               With Digital Marketing
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-neutral-600 font-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-            At ARA Discover, we craft powerful, data-driven marketing strategies to boost your online presence, attract the right audience, and drive measurable business growth. From startups to established enterprises, our customized solutions help you scale faster and smarter in today’s competitive digital world.
+            At ARA Discover Marketing, we craft powerful, data-driven marketing strategies to boost your online presence, attract the right audience, and drive measurable business growth. From startups to established enterprises, our customized solutions help you scale faster and smarter in today’s competitive digital world.
           </p>
 
           {/* CTA Buttons */}

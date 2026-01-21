@@ -4,7 +4,7 @@ import FaqIllustration from "../../../src/assets/FAQ.jpg"; // Illustration image
 
 const faqData = [
   {
-    question: "What services does ARA Discoveries Pvt Ltd offer?",
+    question: "What services does ARA Discover Marketing offer?",
     answer:
       "We provide digital marketing, web development, branding, social media management, and advertising solutions.",
   },
