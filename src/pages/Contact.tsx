@@ -81,7 +81,7 @@ const Contact = () => {
       );
 
             const res = await fetch(
-        "https://ara-fb-production-cmfgdub4f8h4bch0.centralindia-01.azurewebsites.net/api/leads/public",
+        "https://ara-fb-free-plan-2026-bgdpg8cudtbhfpcp.centralindia-01.azurewebsites.net/api/leads/public",
         {
           method: "POST",
           headers: {
